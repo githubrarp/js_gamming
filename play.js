@@ -1,6 +1,7 @@
 var readline = require('readline-sync');
 var menu = require("./menu");
 var guessing = require("./guessing");
+var ttt = require("./tictactoe");
 
 menu.main_menu();
 
@@ -8,7 +9,8 @@ var selection = readline.question("Enter your selection or 0 to exit: ").toStrin
 
 if (selection == '1'){
     guessing.guessingLogic();
-    // process.stdout.write("Choose: " + selection);
+}else if(selection == '2'){
+    ttt.tttLogic();
 }else if(selection == '0'){
     process.stdout.write("\nGood Bye!\n");
     process.exit();
